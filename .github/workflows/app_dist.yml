@@ -27,7 +27,7 @@ jobs:
       - name: Node.js setup
         uses: actions/setup-node@v3
         with:
-          node-version: lts
+          node-version: latest
 
       - name: Install Rust
         run: curl https://sh.rustup.rs -sSf | sh -s -- -y
