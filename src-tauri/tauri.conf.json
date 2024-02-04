@@ -6,8 +6,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "todo-sqlite",
-    "version": "0.0.0"
+    "productName": "tauri-sqlite",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -20,7 +20,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.wolfi.todo-sqlite",
+      "identifier": "com.wolfi.tauri-sqlite",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -40,6 +40,18 @@
         "width": 800,
         "height": 600
       }
-    ]
+    ],
+    "updater": {
+      "active": false,
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ0N0VFRTM5RUE2QjM4QTgKUldTb09HdnFPZTUrUkJ2Q2ZEZDFxZExVZEp3TGU3U3pxYzV3NDVBSXFXVXAwalpLalVpUTFnM24K",
+      "windows": {
+        "installMode": "passive",
+        "installerArgs": []
+      },
+      "endpoints": [
+        "https://api.github.com/repos/gustavo-meira/tauri-sqlite/releases/latest"
+      ]
+    }
   }
 }
