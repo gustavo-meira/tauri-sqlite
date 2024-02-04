@@ -42,7 +42,7 @@
       }
     ],
     "updater": {
-      "active": false,
+      "active": true,
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ0N0VFRTM5RUE2QjM4QTgKUldTb09HdnFPZTUrUkJ2Q2ZEZDFxZExVZEp3TGU3U3pxYzV3NDVBSXFXVXAwalpLalVpUTFnM24K",
       "windows": {
