@@ -66,7 +66,7 @@ function App() {
         <ul>
           {todos.map((todo) => (
             <li key={todo.id}>
-              <label>
+              <label className={todo.completed ? 'scratched' : ''}>
                 {todo.text}{' '}
                 <input
                   type="checkbox"
