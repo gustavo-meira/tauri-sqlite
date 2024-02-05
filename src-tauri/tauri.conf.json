@@ -50,7 +50,7 @@
         "installerArgs": []
       },
       "endpoints": [
-        "https://gist.githubusercontent.com/gustavo-meira/d95e8e14582227b7d16053c5c3a71dc7/raw/fec9d5b006d48049c70312e219360344ab6f757d/tauri-sqlite-updater"
+        "https://gist.githubusercontent.com/gustavo-meira/d95e8e14582227b7d16053c5c3a71dc7/raw/"
       ]
     }
   }
