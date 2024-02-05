@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { todoApi } from '@/api';
 import { Todo } from '@/types';
 import { cn } from '@/lib/utils';
+import { Button, Card, Checkbox, Label } from '@/components';
 
 type TodoCardProps = {
   todo: Todo;
@@ -29,13 +30,16 @@ export const TodoCard = (props: TodoCardProps) => {
   });
 
   return (
-    <div className="flex justify-between">
-      <label className={cn({ 'line-through': props.todo.completed })}>
-        <input
-          type="checkbox"
+    <Card className="flex justify-between bg-blue-700 p-2">
+      <Label
+        className={cn('text-white text-lg flex items-center hover:opacity-80', {
+          'line-through': props.todo.completed,
+        })}
+      >
+        <Checkbox
           checked={props.todo.completed}
-          className="mr-1"
-          onChange={() =>
+          className="mr-2 h-6 w-6"
+          onClick={() =>
             updateCompleted({
               id: props.todo.id,
               completed: !props.todo.completed,
@@ -43,8 +47,14 @@ export const TodoCard = (props: TodoCardProps) => {
           }
         />
         {props.todo.text}
-      </label>
-      <button onClick={() => deleteTodo({ id: props.todo.id })}>X</button>
-    </div>
+      </Label>
+      <Button
+        variant="destructive"
+        size="sm"
+        onClick={() => deleteTodo({ id: props.todo.id })}
+      >
+        X
+      </Button>
+    </Card>
   );
 };
