@@ -1,13 +1,8 @@
-import { useQuery } from '@tanstack/react-query';
-import { todoApi } from '@/api';
-import { TodoCard } from '../cards/todo-card';
+import { TodoCard } from '@/components';
+import { useTodoList } from './todo-list.hook';
 
 export const TodoList = () => {
-  const { data: todos } = useQuery({
-    queryKey: ['todos'],
-    queryFn: todoApi.selectAll,
-    initialData: [],
-  });
+  const { todos } = useTodoList();
 
   return (
     <div className="flex justify-center">
