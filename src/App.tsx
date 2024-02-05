@@ -59,7 +59,7 @@ function App() {
           onChange={(e) => setTodoText(e.currentTarget.value)}
           placeholder="Enter a todo..."
         />
-        <button type="submit">Greet</button>
+        <button type="submit">New Todo</button>
       </form>
 
       <div className="row">
